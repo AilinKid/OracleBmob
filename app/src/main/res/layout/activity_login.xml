@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:background="@color/colorTopBarBackground"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/back">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/colorActivityBackground"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <!--这个linearLayout仅仅是一个分割线的作用-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_above="@+id/llEmail"
+            android:layout_alignLeft="@+id/llEmail"
+            android:layout_alignRight="@+id/llEmail"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorDividerLine">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/ivUserIcon"
+                android:src="@mipmap/ic_catchphrase" />
+
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:hint="学号"
+                android:textColor="@color/colorActivityBackground"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="#b4b6c2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:id="@+id/llDivierLine"
+            android:layout_below="@+id/llEmail"
+            android:orientation="horizontal"
+            android:layout_alignLeft="@+id/llEmail"
+            android:layout_alignRight="@+id/llEmail"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorDividerLine">
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llPassWord"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/llDivierLine">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/ivLock"
+                android:src="@mipmap/ic_lock_white_24dp" />
+
+        <EditText
+            android:id="@+id/etPassWord"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:textColor="@color/colorActivityBackground"
+            android:layout_marginLeft="10dp"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:textColorHint="#b4b6c2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:id="@+id/llDivierLineBottom"
+            android:layout_below="@+id/llPassWord"
+            android:orientation="horizontal"
+            android:layout_alignLeft="@+id/llEmail"
+            android:layout_alignRight="@+id/llEmail"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorDividerLine">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/llPassWord"
+            android:layout_alignRight="@+id/llPassWord"
+            android:layout_below="@+id/llDivierLineBottom"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorTopBarBackground"
+            android:text="登录"
+            android:textColor="@color/colorActivityBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="forget password?"
+            android:id="@+id/tvForgetPassword"
+            android:textColor="@color/colorTopBarBackground"
+            android:textSize="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

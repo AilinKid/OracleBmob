@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorActivityBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="?android:attr/selectableItemBackground">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdTeacherAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            fresco:backgroundImage="@color/colorImageBackground"
+            fresco:progressBarImage="@mipmap/ic_refresh"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:failureImage="@mipmap/ic_error_light"
+            fresco:failureImageScaleType="centerInside"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:roundAsCircle="true">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="发布了试题"
+            android:id="@+id/tvPaperContent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/sdTeacherAvatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="05-13 14:49"
+            android:id="@+id/tvPaperTime"
+            android:paddingTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/tvPaperContent"
+            android:layout_alignLeft="@+id/tvPaperContent"
+            android:text="Oracle在线单项练习"
+            android:textColor="@color/colorTextTile"
+            android:layout_marginTop="8dp"
+            android:id="@+id/tvPaperTitle"
+            />
+        </RelativeLayout>
+</RelativeLayout>

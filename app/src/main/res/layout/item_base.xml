@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/colorActivityBackground"
+    android:elevation="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdAvatar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            fresco:backgroundImage="@color/colorImageBackground"
+            fresco:progressBarImage="@mipmap/ic_refresh"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:failureImage="@mipmap/ic_error_light"
+            fresco:failureImageScaleType="centerInside"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:roundAsCircle="true">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="zke1e"
+            android:id="@+id/tvauthor"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@+id/sdAvatar" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/sdPostCover"
+            android:layout_below="@+id/sdAvatar"
+            fresco:backgroundImage="@color/colorImageBackground"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            fresco:failureImageScaleType="centerInside"
+            fresco:actualImageScaleType="centerCrop"
+            android:layout_marginTop="5dp">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="android-[译]两行代码搞定ViewPager的过渡动画"
+        android:id="@+id/tvTitle"
+        android:layout_below="@+id/sdPostCover"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorTextTile"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ViewPager自带了一种默认的页面滑动切换动画，但是如果产品想要更炫的滑动效果的时候怎么办呢？不要怕，我们可以使用support library..."
+        android:id="@+id/tvDescription"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorTextContent"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="695"
+        android:id="@+id/tvCommentCount"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/colorCommentNumberText"
+        android:background="@color/colorCommentNumberBackground"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

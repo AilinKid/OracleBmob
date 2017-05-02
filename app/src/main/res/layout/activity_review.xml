@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arena.oracle.activity.ReviewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_layout4"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/rlTopBar2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="left|top"
+                android:background="@color/colorCommentNumberText"
+                android:elevation="2dip"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="试题回顾"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorActivityBackground" />
+
+                <TextView
+                    android:id="@+id/review_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="2/3"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorActivityBackground" />
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="48dip"
+            android:layout_margin="50dp"
+            android:background="#34a4f4"
+            android:text="下一题"
+            android:textColor="@color/colorActivityBackground"
+            android:textSize="18dp"/>
+
+        <include
+            layout="@layout/review_history_item"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@id/toolbar_layout4"
+            android:layout_above="@id/button_finish_test"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

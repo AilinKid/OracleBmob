@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arena.oracle.fargment.Grade_History_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_layout3"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/rlTopBar2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="left|top"
+                android:background="@color/colorCommentNumberText"
+                android:elevation="2dip"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="成绩历史"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorActivityBackground" />
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+        <ListView
+            android:id="@+id/lv_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="45dp"
+            android:layout_weight="1"
+            android:layout_below="@+id/toolbar_layout3"
+            android:fadingEdge="none"
+            android:listSelector="@color/colorCommentNumberText"
+            android:divider="#65ccbb"
+            android:dividerHeight="2dp"
+            android:scrollbars="vertical"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

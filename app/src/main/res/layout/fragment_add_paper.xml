@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arena.oracle.fargment.AddPaperFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorActivityBackground">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_layout"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/rlTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="left|top"
+                android:background="@color/colorCommentNumberText"
+                android:elevation="2dip"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="试卷添加"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorActivityBackground" />
+
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_add_question"
+                android:layout_width="0dp"
+                android:layout_height="48dip"
+                android:layout_weight="1"
+                android:layout_margin="12dp"
+                android:background="#4cef80"
+                android:gravity="center"
+                android:text="添加"
+                android:textColor="@color/colorActivityBackground"
+                android:textSize="18dp"/>
+            <Button
+                android:id="@+id/button_add_paper"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_margin="12dp"
+                android:background="#34a4f4"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/colorActivityBackground"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <include
+            layout="@layout/add_question_list_item"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_below="@id/toolbar_layout"
+            android:layout_above="@id/bottom_button"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/add_paper_dialog"
+        android:id="@+id/add_paper_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+</FrameLayout>

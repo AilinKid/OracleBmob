@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTopBarBackground"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/svRegister"
+        android:scrollbars="none">
+
+        <!-- scrollview 會向下延伸-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorFragmentBackground">
+
+
+            <RelativeLayout
+                android:id="@+id/rlAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorTopBarBackground">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="40dp"
+                    android:id="@+id/sdRegAvatar"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:backgroundImage="@color/colorImageBackground"
+                    fresco:failureImage="@mipmap/ic_error_light"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:progressBarAutoRotateInterval="5000"
+                    fresco:progressBarImage="@mipmap/ic_refresh"
+                    fresco:progressBarImageScaleType="centerInside"
+                    fresco:roundAsCircle="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_edit_avatar"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignBottom="@+id/sdRegAvatar"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <!--回退按鈕-->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ibtnRegBack"
+                    android:src="@mipmap/ic_arrow_back"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlAvatar">
+
+                <TextView
+                    android:id="@+id/tvBasicInforMation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etUsername"
+                    android:layout_marginTop="30dp"
+                    android:text="基本信息"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorTopBarBackground" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBasicInforMation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:hint="账户名称" />
+
+
+
+                <EditText
+                    android:id="@+id/etRegPassWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etUsername"
+                    android:layout_alignRight="@+id/etUsername"
+                    android:layout_below="@+id/etUsername"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:hint="登录密码" />
+
+                <EditText
+                    android:id="@+id/etNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etRegPassWord"
+                    android:layout_alignRight="@+id/etRegPassWord"
+                    android:layout_below="@+id/etRegPassWord"
+                    android:layout_marginTop="10dp"
+                    android:hint="学号" />
+
+                <EditText
+                    android:id="@+id/etClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/etNumber"
+                    android:layout_alignRight="@+id/etNumber"
+                    android:layout_below="@+id/etNumber"
+                    android:layout_marginTop="10dp"
+                    android:hint="班级" />
+
+                <Spinner
+                    android:id="@+id/spIdentity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/etClass"
+                    android:layout_alignLeft="@+id/etClass"
+                    android:layout_alignRight="@+id/etClass"
+                    android:layout_alignStart="@+id/etClass"
+                    android:layout_below="@+id/etClass"
+                    android:layout_marginTop="10dp" />
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/spIdentity"
+                    android:layout_alignRight="@+id/spIdentity"
+                    android:layout_below="@+id/spIdentity"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorTopBarBackground"
+                    android:text="注册"
+                    android:id="@+id/btnRegister"
+                    android:textColor="@color/colorActivityBackground" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

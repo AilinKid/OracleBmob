@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTopBarBackground">#1e8ae8</color>
+    <color name="colorActivityBackground">#ffffff</color>
+    <color name="colorFragmentBackground">#eaeef4</color>
+    <color name="colorBottomBarNormalBackground">#ffffff</color>
+    <color name="colorBottomBarPressedBackground">#ffe5e5e5</color>
+    <color name="colorImageBackground">#ffeff6fa</color>
+    <color name="colorTextTile">#212121</color>
+    <color name="colorTextContent">#484848</color>
+    <color name="colorDividerLine">#ffafafaf</color>
+    <color name="colorCommentNumberBackground">#eaf5fe</color>
+    <color name="colorCommentNumberText">#79bdf4</color>
+    <color name="colorToolbarGray">#ffeeeeee</color>
+</resources>

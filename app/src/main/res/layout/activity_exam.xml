@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arena.oracle.activity.ExamActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/bar_layout"
+        android:background="@color/colorCommentNumberText">
+        <TextView
+            android:id="@+id/tv_time_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="时间："
+            android:textColor="@color/colorActivityBackground"
+            android:textSize="18dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="15dp"/>
+        <TextView
+            android:id="@+id/tv_num_of_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/colorActivityBackground"
+            android:paddingRight="12dp"
+            android:paddingTop="15dp"
+            android:textSize="18dp"
+            android:text="2/12"/>
+    </RelativeLayout>
+
+    <!--
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar_layout"
+        />-->
+    <LinearLayout
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/button_finish_test"
+        android:layout_width="0dp"
+        android:layout_height="48dip"
+        android:layout_weight="1"
+        android:layout_margin="12dp"
+        android:background="#34a4f4"
+        android:gravity="center"
+        android:text="下一题"
+        android:textColor="@color/colorActivityBackground"
+        android:textSize="18dp"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/test_list_item"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/bar_layout"
+        android:layout_above="@id/next_button"/>
+
+
+</RelativeLayout>

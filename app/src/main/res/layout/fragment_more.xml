@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentBackground"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/rlTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="left|top"
+            android:background="@color/colorCommentNumberText"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="个人"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorActivityBackground" />
+
+            <ImageButton
+                android:id="@+id/rlMoreEditInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:src="@mipmap/ic_edit" />
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorActivityBackground"
+        android:elevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/rlMoreEditInfo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdMoreAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:backgroundImage="@color/colorImageBackground"
+                fresco:failureImage="@mipmap/ic_error_light"
+                fresco:failureImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:progressBarImage="@mipmap/ic_refresh"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tvMoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/sdMoreAvatar"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/sdMoreAvatar"
+                android:text="Arena"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sdMoreAvatar"
+                android:layout_alignLeft="@+id/tvMoreName"
+                android:text="查看或编辑个人信息"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#CFCFCF" />
+
+        </RelativeLayout>
+
+    </LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorCommentNumberText"
+        android:elevation="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdMoreAvatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:backgroundImage="@color/colorImageBackground"
+            fresco:failureImage="@mipmap/ic_error_light"
+            fresco:failureImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:progressBarImage="@mipmap/ic_refresh"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:roundAsCircle="true">
+
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView
+            android:id="@+id/tvMoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sdMoreAvatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="亲爱的Arena,您好。"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorActivityBackground" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorActivityBackground"
+        android:elevation="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/rlMyLikes"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivMoreCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_eye_grey_24dp" />
+
+
+            <TextView
+                android:id="@+id/tvMoreMyCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivMoreCollect"
+                android:text="我的历史"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_alignLeft="@+id/tvMoreMyCollect"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#D6D6D6">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/rlMyPosts"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivMoreMyPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_profile_article" />
+
+
+            <TextView
+                android:id="@+id/tvMoreMyPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivMoreMyPost"
+                android:text="我的发布"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_alignLeft="@+id/tvMoreMyPost"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#D6D6D6">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/rlAccountSetting"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivMoreSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_write_setting" />
+
+
+            <TextView
+                android:id="@+id/tvMoreSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivMoreSetting"
+                android:text="修改密码"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_alignLeft="@+id/tvMoreSetting"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#D6D6D6">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/rlFeedback"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivMoreReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_intro" />
+
+
+            <TextView
+                android:id="@+id/tvMoreReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivMoreReport"
+                android:text="意见反馈"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_alignLeft="@+id/tvMoreReport"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#D6D6D6">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:background="@color/colorActivityBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/rlExit"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="退出账号"
+                android:textColor="#EE0000"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

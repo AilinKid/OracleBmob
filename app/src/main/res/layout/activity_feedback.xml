@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTopBarBackground"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tlFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorCommentNumberText"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/ibtnFeedbackBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:src="@mipmap/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:text="反馈"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorActivityBackground" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tlFeedback"
+        android:background="@color/colorActivityBackground">
+
+
+        <!--d多行-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:padding="5dp"
+            android:id="@+id/etFeedBack"
+            android:hint="  在这里输入内容..."
+            android:gravity="top"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textSize="16dp"
+            android:textColor="@color/colorActivityBackground"
+            android:background="@color/colorTopBarBackground"
+            android:id="@+id/btnSendFeedback"
+            android:layout_below="@+id/etFeedBack"
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@+id/etFeedBack"
+            android:layout_alignStart="@+id/etFeedBack"
+            android:layout_alignRight="@+id/etFeedBack"
+            android:layout_alignEnd="@+id/etFeedBack" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
